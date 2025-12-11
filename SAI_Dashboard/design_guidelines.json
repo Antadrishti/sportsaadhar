@@ -1,0 +1,162 @@
+{
+  "identity": {
+    "name": "E1",
+    "archetype": "The Anti-AI Designer",
+    "mission": "Create a 'Swiss Utility' dashboard that is dense, authoritative, and highly functional, avoiding generic SaaS aesthetics.",
+    "principles": [
+      "Fusion over Imitation: Mix Swiss Poster boldness with Bloomberg Terminal density.",
+      "Content is King: Data is the hero. Chrome is minimal.",
+      "Contrast: High contrast for readability in bright offices/outdoors.",
+      "Zoom In: Focus on athlete metrics and video evidence."
+    ]
+  },
+  "typography": {
+    "strategy": "The 'Old Money Tech' - Authoritative & Precise",
+    "fonts": {
+      "heading": {
+        "family": "Chivo",
+        "weights": ["700", "900"],
+        "usage": "Page titles, KPI values, Modal headers. Tight tracking."
+      },
+      "body": {
+        "family": "IBM Plex Sans",
+        "weights": ["400", "500", "600"],
+        "usage": "General text, labels, form inputs."
+      },
+      "mono": {
+        "family": "JetBrains Mono",
+        "weights": ["400", "500"],
+        "usage": "IDs, timestamps, raw metrics, tabular data."
+      }
+    },
+    "rules": [
+      "Headings > 32px must use tracking-tight.",
+      "Overlines must be uppercase, text-xs, tracking-widest.",
+      "Data cells must use tabular-nums."
+    ]
+  },
+  "colors": {
+    "theme": "Swiss Utility (Light Mode Focus)",
+    "palette": {
+      "background": "#FFFFFF",
+      "surface": "#F8FAFC",
+      "surface_highlight": "#F1F5F9",
+      "border": "#E2E8F0",
+      "text_primary": "#0F172A",
+      "text_secondary": "#64748B",
+      "primary": "#0F172A",
+      "primary_foreground": "#FFFFFF",
+      "accent": "#0EA5E9",
+      "accent_foreground": "#FFFFFF",
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444",
+      "chart_1": "#0F172A",
+      "chart_2": "#0EA5E9",
+      "chart_3": "#94A3B8",
+      "chart_4": "#F59E0B",
+      "chart_5": "#EF4444"
+    },
+    "usage_rules": [
+      "NO generic gradients.",
+      "Use 'Signal Colors' (Red/Orange/Blue) only for status and actions.",
+      "Backgrounds should be stark white or very light grey. No muddy mid-tones.",
+      "Borders should be crisp (1px solid).",
+      "Forbidden: Teal (#1B93A4) for main elements."
+    ]
+  },
+  "layout": {
+    "grid_system": "The Control Room Grid",
+    "spacing": {
+      "base": "4px",
+      "container_padding": "p-6 md:p-8 lg:p-12",
+      "gap": "gap-4 md:gap-6"
+    },
+    "strategies": [
+      "Dashboard: Dense grid. Widgets stretch to fill height.",
+      "List View: Full-width tables with sticky headers.",
+      "Profile: Bento grid. Hero stats (top left), Video (top right), Timeline (bottom)."
+    ]
+  },
+  "components": {
+    "cards": {
+      "style": "Cardless or Sharp",
+      "classes": "bg-white border border-border shadow-sm rounded-none md:rounded-sm",
+      "hover": "hover:border-primary/20 transition-colors duration-200"
+    },
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 rounded-sm font-medium px-6 py-2",
+      "secondary": "bg-white border border-border text-primary hover:bg-surface rounded-sm font-medium px-6 py-2",
+      "ghost": "hover:bg-surface text-primary rounded-sm px-4 py-2"
+    },
+    "inputs": {
+      "style": "Technical",
+      "classes": "bg-white border-border rounded-sm focus:ring-1 focus:ring-primary focus:border-primary font-sans"
+    },
+    "tables": {
+      "style": "High Density",
+      "header": "bg-surface text-xs uppercase tracking-wider font-semibold text-text_secondary h-10",
+      "row": "border-b border-border hover:bg-surface/50 transition-colors h-12",
+      "cell": "px-4 py-2 text-sm"
+    },
+    "badges": {
+      "style": "Pill or Rect",
+      "classes": "text-xs font-medium px-2 py-0.5 rounded-full border"
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Subtle noise on sidebar backgrounds to reduce sterility.",
+    "shadows": "Crisp, low-blur shadows (shadow-sm).",
+    "borders": "Use 'Tracing Beam' effect on active cards or selected table rows."
+  },
+  "motion": {
+    "philosophy": "Fast & Functional",
+    "transitions": "transition-all duration-200 ease-out",
+    "micro_interactions": "Buttons scale down slightly (0.98) on click. Table rows highlight instantly.",
+    "loading": "Skeleton loaders with shimmering effect (no spinners for layout loading)."
+  },
+  "images": {
+    "athletes": [
+      {
+        "url": "https://images.unsplash.com/photo-1640504409849-da005a55cbd3",
+        "alt": "Young athlete running",
+        "category": "profile_hero"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1761286753703-570ed91dd90e",
+        "alt": "Badminton player action",
+        "category": "action_shot"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1686445921828-d9c22e714f24",
+        "alt": "Archery aiming",
+        "category": "focus_shot"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1700914298803-fbf458a23182",
+        "alt": "Group of athletes",
+        "category": "dashboard_banner"
+      }
+    ],
+    "placeholders": {
+      "avatar": "https://ui.shadcn.com/avatars/01.png",
+      "map": "Use a stylized SVG map of India."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Implement the 'Control Room' grid for the main dashboard.",
+    "Use 'Chivo' for all major headings and 'JetBrains Mono' for data points.",
+    "Ensure the 'Query Builder' modal is spacious and uses clear logic connectors.",
+    "Optimize for density: Avoid excessive padding inside data tables.",
+    "Use the provided image URLs for dummy data in the candidate list and profiles.",
+    "Strictly follow the color palette. Do not introduce new colors without reason.",
+    "Ensure all interactive elements have data-testid attributes."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI Slop': No generic centered layouts or default Tailwind blues.",
+    "Dark colors look good when used independently without gradients.",
+    "Create depth through z-index and subtle borders, not heavy shadows.",
+    "Every interaction needs a micro-state (hover, active, focus).",
+    "Use 2-3x more spacing between SECTIONS, but tight spacing within DATA components."
+  ]
+}

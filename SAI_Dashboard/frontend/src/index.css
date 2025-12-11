@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: 'Chivo', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: var(--font-mono);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 222 47% 11%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 11%;
+    --radius: 0.25rem;
+    
+    --chart-1: 222 47% 11%;
+    --chart-2: 199 89% 48%;
+    --chart-3: 215 20% 65%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 0 84% 60%;
+    
+    --success: 160 84% 39%;
+    --warning: 38 92% 50%;
+    --error: 0 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  .tracking-tight {
+    letter-spacing: -0.025em;
+  }
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Animation classes */
+@layer utilities {
+  .animate-in {
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .skeleton-shimmer {
+    background: linear-gradient(90deg, #F1F5F9 25%, #E2E8F0 50%, #F1F5F9 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+}
+
+@layer base {
+  [data-debug-wrapper="true"] {
+    display: contents !important;
+  }
+}

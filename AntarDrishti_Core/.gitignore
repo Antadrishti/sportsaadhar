@@ -1,0 +1,145 @@
+# ======================
+# Environment Files
+# ======================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env*.local
+*.env
+
+# ======================
+# Build Directories
+# ======================
+build/
+dist/
+out/
+target/
+*.build/
+.buildlog/
+
+# ======================
+# Flutter/Dart
+# ======================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+**/doc/api/
+**/ios/Flutter/.last_build_id
+coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio build artifacts
+**/android/app/debug
+**/android/app/profile
+**/android/app/release
+**/android/.gradle/
+**/android/local.properties
+**/android/key.properties
+
+# iOS/macOS
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.podspec
+**/macos/Pods/
+**/macos/.symlinks/
+
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+venv/
+ENV/
+env/
+.venv/
+
+# ======================
+# Node.js
+# ======================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+*.tsbuildinfo
+
+# ======================
+# IDE & Editors
+# ======================
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*.swo
+*~
+.atom/
+*.sublime-workspace
+*.sublime-project
+
+# ======================
+# OS-Specific
+# ======================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ======================
+# Logs & Temp Files
+# ======================
+*.log
+*.tmp
+*.temp
+*.cache
+.cache/
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# ======================
+# Miscellaneous
+# ======================
+*.class
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# ======================
+# Secrets & Credentials
+# ======================
+*.pem
+*.key
+*.p12
+*.keystore
+*.jks
+secrets/
+credentials/

@@ -1,0 +1,246 @@
+/* SAI Admin Dashboard Styles */
+/* SAI Brand Colors: Blue #1E3A8A, Saffron #FF9933 */
+
+:root {
+  --sai-primary: #1E3A8A;
+  --sai-primary-light: #3B82F6;
+  --sai-primary-dark: #1E40AF;
+  --sai-accent: #FF9933;
+  --sai-accent-light: #FFAD5C;
+  --sai-accent-dark: #E68A00;
+  --sai-success: #059669;
+  --sai-warning: #D97706;
+  --sai-error: #DC2626;
+  --sai-text: #0F172A;
+  --sai-text-muted: #64748B;
+  --sai-bg: #F8FAFC;
+  --sai-border: #E2E8F0;
+}
+
+/* Layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: #FFFFFF;
+  border-right: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 50;
+  transition: transform 0.2s ease-out;
+}
+
+.sidebar-collapsed {
+  transform: translateX(-100%);
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 240px;
+  background: #F8FAFC;
+  min-height: 100vh;
+  transition: margin-left 0.2s ease-out;
+}
+
+.main-content-expanded {
+  margin-left: 0;
+}
+
+/* Table styles */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  background: #F8FAFC;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #64748B;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #E2E8F0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.data-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  font-size: 0.875rem;
+}
+
+.data-table tr:hover {
+  background: rgba(248, 250, 252, 0.5);
+}
+
+/* Card styles */
+.stat-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 1.5rem;
+  transition: border-color 0.2s ease-out;
+}
+
+.stat-card:hover {
+  border-color: rgba(15, 23, 42, 0.2);
+}
+
+/* Button micro-interactions */
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Status badges */
+.badge-verified {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.badge-flagged {
+  background: rgba(239, 68, 68, 0.1);
+  color: #DC2626;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.badge-pending {
+  background: rgba(245, 158, 11, 0.1);
+  color: #D97706;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.badge-gold {
+  background: rgba(245, 158, 11, 0.1);
+  color: #D97706;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-silver {
+  background: rgba(148, 163, 184, 0.1);
+  color: #64748B;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.badge-bronze {
+  background: rgba(180, 83, 9, 0.1);
+  color: #B45309;
+  border: 1px solid rgba(180, 83, 9, 0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.sidebar-open {
+    transform: translateX(0);
+  }
+  
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+/* Offline banner */
+.offline-banner {
+  background: #FEF3C7;
+  color: #92400E;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid #FCD34D;
+}
+
+/* Query builder styles */
+.filter-group {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+.filter-condition {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* JSON preview */
+.json-preview {
+  background: #0F172A;
+  color: #E2E8F0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  overflow-x: auto;
+  max-height: 200px;
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #F1F5F9 25%, #E2E8F0 50%, #F1F5F9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 0.25rem;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Card view grid */
+.candidate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.candidate-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 1.25rem;
+  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.candidate-card:hover {
+  border-color: #0EA5E9;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
+}
+
+/* Progress ring */
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.3s ease-out;
+}
+
+/* Drill-down animation */
+.drill-down-enter {
+  opacity: 0;
+  max-height: 0;
+}
+
+.drill-down-enter-active {
+  opacity: 1;
+  max-height: 500px;
+  transition: opacity 0.2s ease-out, max-height 0.3s ease-out;
+}
